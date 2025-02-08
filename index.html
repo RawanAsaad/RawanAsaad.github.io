@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rawan Asaad - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="new.png" type="image/png">
+
   <style>
     /* General Styles */
     :root {
@@ -30,7 +35,9 @@
       background: var(--navy);
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: var(--font-sans);
       color: var(--lightest-slate);
     }
@@ -70,6 +77,13 @@
       font-size: 1.5rem;
       color: var(--green);
       margin-left: 20px;
+    }
+
+    .navbar .logo img {
+      width: 80px;
+      /* Adjust this value as needed */
+      height: auto;
+      /* Maintain aspect ratio */
     }
 
     .navbar nav {
@@ -149,8 +163,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* About Section */
@@ -171,18 +192,57 @@
       line-height: 1.8;
     }
 
-    .about .technologies {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    .about .technologies li {
-      list-style: none;
-      font-family: var(--font-mono);
+    .experience {
+      padding: 100px 0;
+      background: var(--navy);
       color: var(--light-slate);
     }
+
+    .experience h2 {
+      font-size: 2.5rem;
+      color: var(--lightest-slate);
+      margin-bottom: 20px;
+    }
+
+    .experience p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .education {
+      padding: 106px 0;
+      background: var(--navy);
+      color: var(--light-slate);
+    }
+
+    .education h2 {
+      font-size: 2.5rem;
+      color: var(--lightest-slate);
+      margin-bottom: 20px;
+    }
+
+    .education p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    .certification {
+      padding: 100px 0;
+      background: var(--navy);
+      color: var(--light-slate);
+    }
+
+    .certification h2 {
+      font-size: 2.5rem;
+      color: var(--lightest-slate);
+      margin-bottom: 20px;
+    }
+
+    .certification p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
 
     /* Projects Section */
     .projects {
@@ -204,7 +264,7 @@
     }
 
     .projects .project-item {
-      background: var(--lightest-navy);
+      background: var(--light-navy);
       padding: 20px;
       border-radius: 5px;
       transition: transform 0.3s ease;
@@ -225,31 +285,67 @@
       line-height: 1.6;
     }
 
-    .about .technologies {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 20px;
-  list-style: none; /* Remove default bullets */
-  padding-left: 0; /* Remove default padding */
-}
+    .project-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background: var(--lightest-navy);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.about .technologies li {
-  position: relative;
-  padding-left: 20px; /* Add space for custom bullet */
-  font-family: var(--font-mono);
-  color: var(--light-slate);
-}
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
 
-.about .technologies li::before {
-  content: "▹"; /* Custom bullet symbol */
-  position: absolute;
-  left: 0;
-  color: var(--green); /* Set bullet color to --green */
-}
+    .project-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .project-info {
+      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(10, 25, 47, 0.9);
+      color: var(--lightest-slate);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .project-item:hover .project-info {
+      opacity: 1;
+    }
+
+    .technologies {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .technologies li {
+      position: relative;
+      padding-left: 20px;
+      font-family: var(--font-mono);
+      color: var(--light-slate);
+    }
+
+    .technologies li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+    }
+
     /* Contact Section */
     .contact {
-      padding: 100px 0;
+      padding: 90px 0;
       background: var(--navy);
       color: var(--light-slate);
     }
@@ -266,7 +362,8 @@
       gap: 20px;
     }
 
-    .contact form input, .contact form textarea {
+    .contact form input,
+    .contact form textarea {
       padding: 10px;
       border: 1px solid var(--slate);
       border-radius: 5px;
@@ -290,7 +387,28 @@
       background: var(--lightest-slate);
     }
 
-    /* Social Media Icons */
+    .featured-projects {
+      padding: 100px 0;
+      background: var(--navy);
+    }
+
+    .featured-item {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .featured-info {
+      flex: 1;
+      color: var(--lightest-slate);
+    }
+
+    .featured-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
     .social-icons {
       position: fixed;
       bottom: 20px;
@@ -310,15 +428,15 @@
       color: var(--green);
     }
 
-    .num{
-        font-family: var(--font-mono);
-        color: var(--green);
+    .num {
+      font-family: var(--font-mono);
+      color: var(--green);
     }
-    /* Email Icon */
+
     .high {
       font-family: var(--font-mono);
       color: var(--green);
-}
+    }
 
     .email-icon {
       position: fixed;
@@ -339,37 +457,260 @@
     .email-icon a:hover {
       color: var(--green);
     }
+
+    footer {
+      background-color: var(--navy);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-content p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    .social-links li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    .social-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .social-links a i {
+      margin-right: 8px;
+    }
+
+    .social-links a:hover {
+      color: var(--green);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .project-item {
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      /* Sidebar (200px) | Content (Full Width) */
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .education-tabs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .education-tabs .tab {
+      padding: 15px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--light-slate);
+      border-left: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .education-tabs .tab:hover {
+      color: var(--green);
+    }
+
+    .education-tabs .tab.active {
+      color: var(--green);
+      border-left: 3px solid var(--green);
+    }
+
+    .education-content {
+      position: relative;
+    }
+
+    .education-item {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .education-item.active {
+      display: block;
+    }
+
+    .highlight {
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .education-grid {
+        grid-template-columns: 1fr;
+        /* Stack on smaller screens */
+      }
+    }
+
+    .experience-feature {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      background: var(--navy);
+      padding: 25px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .experience-feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .experience-image img {
+      width: 200px;
+      /* Adjusted for better visibility */
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .experience-content {
+      flex: 1;
+      position: relative;
+    }
+
+    .featured-text {
+      font-size: 0.9rem;
+    
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .experience-content h3 {
+      font-size: 1.8rem;
+      color: var(--lightest-slate);
+      margin-bottom: 10px;
+    }
+
+    .date {
+      font-size: 1rem;
+      color: var(--slate);
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      color: var(--light-slate);
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    .tags {
+      margin-top: 10px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--green);
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+
+
+    @media (max-width: 768px) {
+      .experience-feature {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .experience-image img {
+        width: 150px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <div class="logo">RA</div>
+    <div class="logo"><img src="new.png" alt=""></div>
     <nav>
-      <a href="#about">01. About</a>
-      <a href="#projects">02. Projects</a>
-      <a href="#contact">03. Contact</a>
-      <a href="https://drive.google.com/file/d/10ATzmNJQJCKxPxOjEXU0PanZU3o0zJOP/view?usp=sharing" class="cv-button">CV</a>
+      <a href="#about"><span class="high">01.</span> About</a>
+      <a href="#experience"><span class="high">02.</span> Experience</a>
+      <a href="#education"><span class="high">03.</span> Education</a>
+      <a href="#certification"><span class="high">04.</span> Certification</a>
+      <a href="#projects"><span class="high">05.</span> Projects</a>
+      <a href="#contact"><span class="high">06.</span> Contact</a>
+      <a href="https://drive.google.com/file/d/10ATzmNJQJCKxPxOjEXU0PanZU3o0zJOP/view?usp=sharing"
+        class="cv-button">CV</a>
     </nav>
   </div>
-
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <h3 style="font-family: var(--font-mono); color: var(--green); font-weight: normal; ">Hi, my name is</h3>
-        <h1>Rawan Asaad.</h1>
+      <h1>Rawan Asaad.</h1>
       <p style="margin-bottom: 5%;font-family: var(--font-mono);">A Passionate Data Scientist and Developer.</p>
       <a href="#projects" class="cta-button">Check out my work!</a>
     </div>
   </section>
-
   <!-- About Section -->
-<!-- About Section -->
-<section id="about" class="about">
+  <section id="about" class="about">
     <div class="container">
       <h2><span class="num">01.</span> About Me</h2>
-      <p>Hello! My name is Rawan Asaad, and I enjoy solving problems using technology. My interest in programming started back in high school when I decided to try building my first website using HTML and CSS. Since then, I've been passionate about learning new technologies and applying them to real-world challenges.</p>
-      <p>I'm currently a Computer Science student at Future University in Egypt, where I've had the opportunity to work on various projects, including an<span class="high"> AI-driven facial expression recognition system</span>, a <span class="high"> maze-solving robot</span>, and a <span class="high">hospital management website</span>. My main focus these days is on <span class="high">data science and machine learning</span>, as I'm currently enrolled in a <span class="high">Data Science course</span> through the Digital Egypt Builders Initiative (DEBI).</p>
+      <p>Hello! My name is Rawan Asaad, and I enjoy solving problems using technology. My interest in programming
+        started back in high school when I decided to try building my first website using HTML and CSS. Since then, I've
+        been passionate about learning new technologies and applying them to real-world challenges.</p>
+      <p>I'm currently a Computer Science student at Future University in Egypt, where I've had the opportunity to work
+        on various projects, including an<span class="high"> AI-driven facial expression recognition system</span>, a
+        <span class="high"> maze-solving robot</span>, and a <span class="high">hospital management website</span>. My
+        main focus these days is on <span class="high">data science and machine learning</span>, as I'm currently
+        enrolled in a <span class="high">Data Science course</span> through the <span class="high">Digital Egypt
+          Pioneers Initiative - DEPI</span>.
+      </p>
       <p>Here are a few technologies I’ve been working with recently:</p>
       <ul class="technologies">
         <li>Python / Java / C++ / C# / Prolog </li>
@@ -382,64 +723,239 @@
     </div>
   </section>
 
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2><span class="num">02.</span> Experience</h2>
+
+      <!-- Experience Item: DEPI -->
+      <div class="experience-feature">
+        <div class="experience-image">
+          <img src="/digital_egypt_pioneers_initiative_depi_logo.png" alt="DEPI Logo">
+        </div>
+        <div class="experience-content">
+          <p class="featured-text"><span class="high">Internship</span></p>
+          <h3>Data Scientist -<span class="highlight"> Digital Egypt Pioneers Initiative - DEPI</span></h3>
+          <p class="date">Oct 2024 - Present | Hybrid (Egypt)</p>
+          <p class="description">
+            Working on SQL tools, Data Science, and Machine Learning applications to analyze complex datasets and
+            optimize performance.
+          </p>
+          <div class="tags">
+            <span>Database</span>
+            <span>Data Science</span>
+            <span>Python</span>
+            <span>NumPy</span>
+            <span>Freelancing skills</span>
+            <span>Resume Writing</span>
+            <span>Portfolio Writing</span>
+            <span>+12 Skills</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Experience Item: AMIT Learning -->
+      <div class="experience-feature">
+        <div class="experience-image">
+          <img src="/amit_learning_logo.png" alt="AMIT Learning Logo">
+        </div>
+        <div class="experience-content">
+          <p class="featured-text"><span class="high">Internship</span></p>
+          <h3>Machine Learning Intern -<span class="highlight"> AMIT Learning</span></h3>
+          <p class="date">Jul 2024 - Aug 2024 | On-site (Cairo, Egypt)</p>
+          <p class="description">
+            Developed models for Data Visualization & Convolutional Neural Networks (CNN) while exploring advanced deep
+            learning techniques.
+          </p>
+          <div class="tags">
+            <span>CNN</span>
+            <span>AI</span>
+            <span>Data Visualization</span>
+            <span>Data Cleaning</span>
+            <span>Data Analysis</span>
+            <span>Machine learning</span>
+            <span>+6 Skills</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <div class="container">
+      <h2><span class="num">03.</span> Education</h2>
+
+      <div class="education-grid">
+        <!-- Left: Sidebar -->
+        <ul class="education-tabs">
+          <li class="tab active" onclick="showEducation('fue')">Future University in Egypt</li>
+          <li class="tab" onclick="showEducation('cincinnati')">University of Cincinnati</li>
+        </ul>
+
+        <!-- Right: Education Details -->
+        <div class="education-content">
+          <!-- Future University -->
+          <div id="fue" class="education-item active">
+            <h3><span class="high"> Future University in Egypt</span></h3>
+            <h3>Bachelor of Science in Computer Science </h3>
+            <p><strong>ABET Accredited</strong></p>
+            <p>Faculty of Computers and Information Technology</p>
+            <p> Major: Computer Science</p>
+            <p>Expected Graduation: July 2025</p>
+            <p>GPA: <span class="highlight">3.74</span> | CGPA: <span class="highlight">3.72</span></p>
+            <p>Rank: <span class="high">6th in Department, 8th in Faculty</span></p>
+          </div>
+
+          <!-- University of Cincinnati -->
+          <div id="cincinnati" class="education-item">
+            <h3> <span class="high"> University of Cincinnati</span></h3>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>Faculty of Computer Science</p>
+            <p>Expected Graduation: July 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- certification Section -->
+  <section id="certification" class="certification">
+    <div class="container">
+      <h2><span class="num">04.</span> Certification</h2>
+      <div class="featured-item">
+        <div class="featured-info">
+          <h3 style="font: bold;">CCNA: Introduction to Networks <a
+              href="https://drive.google.com/file/d/1Gh0mRZEK9X5SRHmC0qsCfBSoM-b4ELMO/view?usp=sharing"
+              target="_blank"><i style="padding-left: 10px;" class="fas fa-external-link-alt"></i></a></h3>
+          <p>Issued by <span style="font-style: italic;" class="high"> Cisco Networking Academy</span></p>
+          <p>Verified certification with skills in:</p>
+          <ul class="technologies">
+            <li> Computer Network Management </li>
+            <li> Ethernet </li>
+            <li> IPv6 </li>
+            <li> Internet Protocol (IP) </li>
+            <li> Security </li>
+            <li> Subnetting </li>
+            <li> Switchover </li>
+          </ul>
+        </div>
+        <div class="featured-image">
+          <a href="https://www.credly.com/badges/313aedb3-ae4c-4966-9249-6bb9a3985334/public_url" target="_blank">
+            <img src="ccna-introduction-to-networks.png" alt="CISCO-Badge"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Section -->
   <section id="projects" class="projects">
     <div class="container">
-      <h2><span class="num">02.</span> Projects</h2>
+      <h2><span class="num">05.</span> Projects</h2>
       <div class="project-list">
         <div class="project-item">
-          <h3>AI-Driven Facial Expression Recognition System</h3>
-          <p>Developed a machine learning model using EfficientNetB2 architecture to classify facial expressions into seven emotional categories.</p>
+          <div class="project-image">
+            <img src="face-recognition.png" alt="Facial Recognition Project">
+          </div>
+          <div class="project-info">
+            <h3>AI-Driven Facial Expression Recognition</h3>
+            <p>Developed a machine learning model using EfficientNetB2...</p>
+            <a href="https://github.com/RawanAsaad/FacialRecognition" target="_blank">View Project</a>
+          </div>
         </div>
+
         <div class="project-item">
           <h3>Bakery Website</h3>
-          <p>Designed a responsive website using HTML, CSS, and JavaScript to showcase products and enable online orders.</p>
+          <p>Designed a responsive website using HTML, CSS, and JavaScript to showcase products and enable online
+            orders.</p>
         </div>
         <div class="project-item">
           <h3>Maze Solving Robot</h3>
-          <p>Programmed a robot to autonomously navigate mazes using pathfinding algorithms and sensors.</p>
+          <p>Developed an autonomous robot to navigate mazes...</p>
+          <div class="project-links">
+            <a href="https://github.com/RawanAsaad/MazeRobot" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+          </div>
         </div>
+
         <div class="project-item">
           <h3>CRUD System</h3>
           <p>Built a CRUD application with HTML, CSS, JavaScript, and Bootstrap for efficient record management.</p>
         </div>
         <div class="project-item">
-            <h3>Hospital Management Website</h3>
-            <p>Developed a database-driven website using Microsoft SQL Server and Visual Studio 2012 for managing patient and staff data.</p>
-          </div>
-          <div class="project-item">
-            <h3>GUI for Hospital</h3>
-            <p>Developed a user-friendly JavaFX-based interface for managing hospital operations.</p>
-          </div>
+          <h3>Hospital Management Website</h3>
+          <p>Developed a database-driven website using Microsoft SQL Server and Visual Studio 2012 for managing patient
+            and staff data.</p>
+        </div>
+        <div class="project-item">
+          <h3>GUI for Hospital</h3>
+          <p>Developed a user-friendly JavaFX-based interface for managing hospital operations.</p>
+        </div>
       </div>
     </div>
   </section>
 
+
   <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2><span class="num">03.</span> Contact</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
+      <h2><span class="num">06.</span> Contact</h2>
+      <form action="https://formspree.io/f/mvgzqgaz" method="POST">
+        <input type="text" name="text" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" name="message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
   </section>
-
+  <footer>
+    <div class="footer-content">
+      <p>&copy;2025 Rawan Asaad. All rights reserved.</p>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/RawanAsaad" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </li>
+        <li>
+          <a href="www.linkedin.com/in/rawan-asaad" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="mailto:rawanasaad000@gmail.com" target="_blank">
+            <i class="fab fa-google"></i> Gmail
+          </a>
+        </li>
+        <li>
+          <a href="tel:+201066346021">
+            <i class="fas fa-phone"></i> +201066346021
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
   <!-- Social Media Icons -->
   <div class="social-icons">
     <a href="https://github.com/RawanAsaad" title="GitHub"><i class="fab fa-github"></i></a>
     <a href="http://www.linkedin.com/in/rawan-asaad" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a href="mailto:rawanasaad000@gmail.com" title="Gmail"><i class="fab fa-google"></i></a>
   </div>
-
   <!-- Email Icon -->
   <div class="email-icon">
     <a href="mailto:rawanasaad000@gmail.com">rawanasaad000@gmail.com</a>
   </div>
-
   <!-- JavaScript for Smooth Scrolling -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -450,6 +966,21 @@
         });
       });
     });
+    function showEducation(id) {
+      // Remove 'active' class from all tabs
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+
+      // Add 'active' class to clicked tab
+      document.querySelector(`[onclick="showEducation('${id}')"]`).classList.add('active');
+
+      // Hide all education items
+      document.querySelectorAll('.education-item').forEach(item => item.classList.remove('active'));
+
+      // Show selected education item
+      document.getElementById(id).classList.add('active');
+    }
+
   </script>
 </body>
+
 </html>
